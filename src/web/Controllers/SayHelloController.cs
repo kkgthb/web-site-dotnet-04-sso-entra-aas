@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Handwritten.Controllers;
 
-[ApiController]
+[ApiController][Authorize]
 [Route("api/[controller]")]
 public class SayHelloController : ControllerBase {
     // You can get this response by visiting "/api/sayhello" (any capitalization of "sayhello" is fine)
